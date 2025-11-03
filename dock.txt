@@ -1,0 +1,96 @@
+10. Pull Ubuntu image in Docker and execute bash 
+
+make ubuntu ec2 instance and connect
+
+sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get install docker.io -y
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo docker pull ubuntu
+sudo docker images
+sudo docker run -it ubuntu bash
+pwd
+mkdir abdul
+ls
+
+------------------------------------------------------------------------------------------
+
+12. Pull Docker images, list the Docker images currently stored on your machine, remove
+an image that you no longer need 
+
+make ubuntu ec2 instance and connect
+
+sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get install docker.io -y
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo docker pull ubuntu
+sudo docker pull alpine
+sudo docker images
+sudo docker rmi IMAGE_ID
+sudo docker images              //to check for deletion
+
+
+------------------------------------------------------------------------------------------
+
+13. Execute basic commands in Docker
+
+make ubuntu ec2 instance and connect
+
+sudo docker --version
+sudo docker info
+sudo docker pull ubuntu
+sudo docker images
+sudo docker ps -a
+sudo docker rmi IMAGE_ID
+sudo docker images              //to check for deletion
+sudo docker run -it ubuntu bash
+exit
+
+------------------------------------------------------------------------------------------
+
+17. Build a Docker image from the Docker file, run a Docker container using the built
+image.
+
+
+create ec2 ubuntu instance 
+add new security rule to-
+type - custom tcp and port - 8080 and source 0.0.0.0
+and connect
+
+ubuntu commands:
+sudo su
+apt update -y
+apt install docker.io -y
+
+mkdir html
+cd html
+
+nano index.html
+>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Page</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>This is my first HTML page.</p>
+</body>
+</html>
+
+
+nano dockerfile
+>
+from httpd
+copy ./ /usr/local/apache2/htdocs
+
+
+> docker build -t index .
+> docker run -d -p 8080:80 index
+
+now go to your instance -> copy ipv4 address -> open new tab -> http://<your_ip>:8080
+
+
+
+

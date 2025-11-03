@@ -1,0 +1,104 @@
+Github
+
+11. Pull files from GitHub using git, make changes and push file to GitHub using git
+
+make folder and open cmd in it
+
+> git clone https://github.com/username/repo-name.git
+> cd repo-name
+> echo "Hello from Git" > readme.txt
+> git status
+> git add .
+> git commit -m "New file"
+> git push origin main/master
+now create a file on GitHub repo and then
+> git pull origin main/master
+
+----------------------------------------------------------------------------------------------------
+
+9. To Perform various GIT operations on local and Remote repositories
+
+make a repo on github
+
+local repo
+
+> git config --global user.name "Your Name"
+> git config --global user.email "your_email@example.com"
+> mkdir myproject
+> cd myproject
+> git init
+> echo "Hello from Git" > readme.txt
+> git status
+> git add .
+> git commit -m "New file"
+> git remote add origin https://github.com/USERNAME/REPO.git
+> git push origin main/master
+
+
+remote repo
+
+make folder and open cmd in it
+
+> git clone https://github.com/username/repo-name.git
+> cd repo-name
+> echo "Hello from Git" > readme.txt
+> git status
+> git add .
+> git commit -m "New file"
+> git push origin main/master
+now create a file on GitHub repo and then
+> git pull origin main/master
+
+----------------------------------------------------------------------------------------------------
+
+15. Create a Git repository, add a new file to the repository, Commit the changes with a
+meaningful message, Push the changes to a remote repository.
+
+
+make a repo on github
+
+> git config --global user.name "Your Name"
+> git config --global user.email "your_email@example.com"
+> mkdir myproject
+> cd myproject
+> git init
+> echo "Hello from Git" > readme.txt
+> git status
+> git add .
+> git commit -m "New file"
+> git remote add origin https://github.com/USERNAME/REPO.git
+> git push origin main/master
+
+----------------------------------------------------------------------------------------------------
+
+14. Execute basic commands in git
+
+> git --version
+> git config --global user.name "Your Name"
+> git config --global user.email "your_email@example.com"
+
+> mkdir project
+> cd project
+> git init
+
+> echo "sample text" > file.txt
+> git status
+> git add file.txt
+> git add . 
+
+> git commit -m "Initial commit"
+
+> git log
+> git branch
+
+> git remote add origin https://github.com/USERNAME/REPO.git
+> git remote -v
+
+> git push -u origin main
+> git push origin main
+> git pull origin main
+
+> git fetch
+> git clone https://github.com/USERNAME/REPO.git
+
+
